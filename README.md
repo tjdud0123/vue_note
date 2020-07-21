@@ -13,10 +13,3 @@
 ### 🟧 폼입력 데이터 바인딩
 텍스트 영역의 보간 `(<textarea>{{ text }}</textarea>)`은 작동하지 않습니다. 대신 v-model를 사용하십시오.
 v-model 표현식의 초기 값이 어떤 옵션에도 없으면, <select> 엘리먼트는 “선택없음” 상태로 렌더링됩니다. iOS에서는 이 경우 변경 이벤트가 발생하지 않아 사용자가 첫 번째 항목을 선택할 수 없게됩니다. 사용하지 않는 옵션에 빈 값을 넣는 것이 좋습니다.
-
-### 🟧 camelCase vs. kebab-case
-HTML 속성은 대소 문자를 구분하지 않으므로 문자열이 아닌 템플릿을 사용할 때 camelCased prop 이름에 해당하는 kebab-case(하이픈 구분)를 사용해야 합니다.
-```
-props: ['myMessage'], <child my-message="안녕하세요!"></child>
-```
-
