@@ -1,0 +1,8 @@
+/*줄바꿈 방지*/
+white-space:nowrap;
+/*넓이 맞추기*/
+width:fit-content;
+/* pseudo 선택자로 삽입한 콘텐트 빼기 */
+.className:after{
+    content:none;
+}
