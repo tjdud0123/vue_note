@@ -1,8 +1,44 @@
 /*줄바꿈 방지*/
 white-space:nowrap;
+
 /*넓이 맞추기*/
 width:fit-content;
+
 /* pseudo 선택자로 삽입한 콘텐트 빼기 */
 .className:after{
     content:none;
+}
+
+/*position absolute 중앙정렬*/
+.my_div {
+    position:absolute;
+    top: 50%;
+    left;50%;
+    transform:translate(-25%, 50%);
+}
+.play-img {
+  width: 50%;
+}
+
+/*transition 단축속성*/
+transition: property | duration | timing-function | delay
+
+/* background 단축속성 */
+background: no-repeat 0% center/50% url('/path');
+/* background-repeat: no-repeat;
+   background-position: 0% center;
+   background-size: 50%;
+   background-image: url('/resources/web/images/browse/welcome/button_hover_img.png'); */
+
+/* image hover switch transition */
+.img-container {
+  background: no-repeat 0% 0%/49.95% url('/path');
+}
+.play-img {
+  cursor: pointer;
+  width: 50%;
+  transition: opacity 0.3s ease-in-out;
+}
+.play-img:hover {
+  opacity: 0;
 }
