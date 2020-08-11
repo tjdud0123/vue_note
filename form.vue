@@ -3,7 +3,7 @@
 
 <textarea placeholder="내용을 입력해 주세요." v-model="formData.content"></textarea>
 
-<button type="button" v-on:click.prevent="postConsulting" v-bind:data-target="isApplied">신청 하기</button>
+<button type="button" v-on:click.prevent="postContent" v-bind:data-target="isApplied">신청 하기</button>
 
 <div id="modal_success" tabindex="-1">
     <button type="button" v-on:click="confirm">확인</button>
@@ -28,17 +28,15 @@ export default {
         },
     },
     methods: {
-        postConsulting() {
+        postContent() {
             this.formData.startedAt = new Date();
             const payload = this.formData;
             if (this.formData.phoneNum && this.formData.content) {
-                this.$apiService.postConsulting(payload).then(response => {
-                    console.log(payload);
+                this.$apiService.postContent(payload).then(response => {
                 });
             }
         },
-        async confirm() {
-            await this.getConsulting()
+        confirm() {
             this.formData.phoneNum = "";
             this.formData.content = "";
         },
@@ -47,6 +45,6 @@ export default {
 </script>
 
 <!--index.js-->
-postConsulting(payload) {
-    return apiConfig.post(`/consultings`, payload)
-},
+postContent(payload) {
+    return apiConfig.post(`/contents`, payload)
+}
