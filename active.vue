@@ -2,10 +2,11 @@
 
 <!--.vue 파일-->
     <label
-        v-for="(grade) in grades"
-        v-bind:key="grade.grade"
-        v-on:click.prevent="setGrade(grade.grade)"
-        v-bind:class="{ active : curGrade === grade.grade }"
+        v-for="(option) in options"
+        v-bind:key="option.num"
+        v-on:click.prevent="setNum(option.num)"
+        v-bind:class="{ active : curNum === option.num }"
+        v-bind:style="{ color: curNum === option.num ? option.color : '' }"
     >
   </label>
 
@@ -15,20 +16,20 @@
 export default {
   data() {
     return {
-      curGrade: 1,
-      grades: [
-        { grade: 1 },
-        { grade: 2 },
-        { grade: 3 },
-        { grade: 4 },
-        { grade: 5 }
+      curNum: 1,
+      options: [
+        { num: 1, color:'red' },
+        { num: 3, color:'yellow' },
+        { num: 5, color:'blue' },
+        { num: 7, color:'green' },
+        { num: 9, color:'purple' }
       ]
     };
   },
   methods: {
-    setGrade(gradeSelf) {
+    setNum(num) {
       // 데이터 셋팅
-      this.curGrade = gradeSelf;
+      this.curNum = num;
     }
   }
 };
