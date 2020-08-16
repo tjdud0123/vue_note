@@ -1,4 +1,4 @@
-<!--같은 페이지를 리로드가아닌 리마운트를 하고싶을 때-->
+<!--같은 페이지를(라우트 동일) 리로드가 아닌 컴포넌트 재생성을 하고싶을 때-->
 <div class="main-content">
   <child-component :key="componentKey" />
 </div>
@@ -9,17 +9,16 @@ export default {
   components: {
     ChildComponent
   },
+  
   data: () => ({
-    componentKey:''
+    componentKey:true
   }),
-  mounted() {
-    this.componentKey = this.user.id;
-  },
-  watch: {
-    'user.id': function (val, oldVal) { 
-      this.componentKey = val;
-    },
-  },
+  
+  methods:{
+        reCreate() {
+            this.componentKey = !this.componentKey
+        }
+    }
 }
 </script>
 
