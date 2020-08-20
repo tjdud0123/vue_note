@@ -1,6 +1,13 @@
 /*줄바꿈 방지*/
 white-space:nowrap;
 
+/*글자수 제한*/
+width:90%;
+display:block;
+overflow: hidden;
+text-overflow: ellipsis;
+white-space: nowrap;
+
 /*넓이 맞추기*/
 width:fit-content;
 
@@ -34,11 +41,42 @@ background: no-repeat 0% center/50% url('/path');
 .img-container {
   background: no-repeat 0% 0%/49.95% url('/path');
 }
-.play-img {
+.img {
   cursor: pointer;
   width: 50%;
   transition: opacity 0.3s ease-in-out;
 }
-.play-img:hover {
+.img:hover {
   opacity: 0;
 }
+
+/* 미디어 쿼리 */
+@media screen and (min-width: 1200px) {
+  .review-obj {
+    display: block;
+    position: absolute;
+    width: 260px;
+    left: 66%;
+    top: 670px;
+  }
+}
+
+/* min/max font-size */
+.class {
+    font-size: min(4vw, 30px);
+    font-size: max(4vw, 30px);
+}
+
+/* aspect Ratio */
+.container {
+  width: 100%;
+  padding-top: 100%; /* 1:1 Aspect Ratio */
+  padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+  padding-top: 75%; /* 4:3 Aspect Ratio (divide 3 by 4 = 0.75) */
+}
+
+/* css grid */
+/*https://heropy.blog/2019/08/17/css-grid/*/
+display: grid;
+grid-template-columns: repeat(4, 20%);
+justify-content: center;
