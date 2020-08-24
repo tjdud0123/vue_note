@@ -80,3 +80,25 @@ background: no-repeat 0% center/50% url('/path');
 display: grid;
 grid-template-columns: repeat(4, 20%);
 justify-content: center;
+
+/* scrollbar always show */
+.div::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+.div::-webkit-scrollbar:vertical {
+    width: 11px;
+}
+
+.div::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    border: 2px solid white; /* should match background, can't be transparent */
+    background-color: rgba(0, 0, 0, .3);
+}
+
+/* 2개 이상 변수 calc */
+height: calc(72vh - (173px + 1.5rem))
+
+/* css로 배치 순서 뒤집기 */
+display: flex;
+flex-direction: column-reverse;
