@@ -191,9 +191,21 @@ const regType1 = /^[A-Za-z\s0-9+]*$/;
 </script>
     
 <!--DOM 갱신 후 실행하는 콜백함수-->
-mounted() {
-    this.$nextTick(function() {
-        var dom = document.getElementById('item-0');
-        dom.style.backgroundColor = 'red';
-    });
-
+<script>
+export default {
+    mounted() {
+        this.$nextTick(function() {
+            var dom = document.getElementById('item-0');
+            dom.style.backgroundColor = 'red';
+        });
+    }
+}
+</script>
+<!--DOM 갱신 후 실행하는 콜백함수-->
+<script>
+export default {
+    metaInfo() {
+    return { title: '페이지 타이틀 이름' };
+  }
+}   
+</script>
