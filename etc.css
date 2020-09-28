@@ -110,3 +110,21 @@ flex-direction: column-reverse;
     border-top: 80px solid #EFF2F7;
     border-right: 80px solid transparent;
   }
+
+/*active bar*/
+.active {
+  position: relative;
+  color: yellow !important;
+  opacity: 1;
+}
+
+.active:after {
+  content: "";
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  right: 10px;
+  margin: auto;
+  background: yellow;
+  height: 3px;
+}
