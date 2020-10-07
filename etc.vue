@@ -16,8 +16,20 @@ export default {
 <!-- 프롭스 & 이벤트 -->
 <pagination v-on:setIdx="setIdx" :listLength="articles.length" :printLength="printLength"></pagination>
 
-props: ['listLength', 'printLength'],
-this.$emit("setIdx", this.order * this.printLength + this.ulIdx * this.printLength * 5);
+props: {
+    isShow: {
+      type: Boolean,
+      default: false,
+    },
+    propsTopic: {
+      type: Object,
+      default: () => {},
+    },
+  },
+  
+  setIdx(){
+    this.$emit("setIdx", startId);
+  }
 
     setIdx(startId) {
         this.startIdx = startId
