@@ -128,3 +128,27 @@ flex-direction: column-reverse;
   background: yellow;
   height: 3px;
 }
+
+/* 이모지 색변경 */
+<div>🚀🎭😻</div>
+
+div {
+  color: transparent;  
+  text-shadow: 0 0 0 red;
+}
+
+/* 이모지 아웃라인만 남기기 */
+<p title="🚀">🚀</p>
+p {
+  margin: 0;
+  color: transparent;
+  text-shadow: 0 0 3px blue;
+  font-size: 20px;
+  position: relative;
+}
+
+p::before {
+  content: attr(title);
+  position: absolute;
+  text-shadow: 0 0 0 #fff;
+}
