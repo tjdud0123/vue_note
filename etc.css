@@ -152,3 +152,11 @@ p::before {
   position: absolute;
   text-shadow: 0 0 0 #fff;
 }
+
+/* 클래스 추가/삭제시 속성값 변화할때 transition 주기 */
+.circle {
+  border-radius: 50%;
+  background: #f8f8f8;
+  color: #cccccc;
+  transition: width 0.4s, height 0.4s;
+}
