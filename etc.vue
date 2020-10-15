@@ -213,7 +213,7 @@ export default {
     }
 }
 </script>
-<!--DOM 갱신 후 실행하는 콜백함수-->
+<!--meta title 설정-->
 <script>
 export default {
     metaInfo() {
@@ -221,3 +221,17 @@ export default {
   }
 }   
 </script>
+<!--ref로 잡아온 후 element class 속성 추가-->
+<script>
+export default 
+    mounted() {
+        this.audioCanvas.classList.add('w-100');
+    }
+    computed: {
+    audioCanvas() {
+      return this.$refs.audio.$el.firstChild;
+    },
+  },
+}  
+</script>
+this.$refs.audio.$el.firstChild;
