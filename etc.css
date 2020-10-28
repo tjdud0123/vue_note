@@ -160,3 +160,9 @@ p::before {
   color: #cccccc;
   transition: width 0.4s, height 0.4s;
 }
+
+/* 흑백 처리 */
+img{
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
