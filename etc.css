@@ -166,3 +166,12 @@ img{
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
 }
+
+/* 테이블 수직방향 중앙정렬 */
+.table thead th {
+  vertical-align: middle;
+}
+
+.table td {
+  vertical-align: middle;
+}
