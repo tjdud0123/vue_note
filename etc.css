@@ -175,3 +175,8 @@ img{
 .table td {
   vertical-align: middle;
 }
+
+/* 마지막 요소 중 특정 태그만 없애기 */
+.wrapper:last-child hr {
+  display: none;
+}
