@@ -96,6 +96,16 @@ justify-content: center;
     background-color: rgba(0, 0, 0, .3);
 }
 
+/* scrollbar 모양 hide */
+.div::-webkit-scrollbar {
+  display: none;
+}
+
+.div{
+-ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;
+}
+
 /* 2개 이상 변수 calc */
 height: calc(72vh - (173px + 1.5rem))
 
