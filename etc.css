@@ -202,7 +202,7 @@ img{
     }
 }
 
-/* 사파리 모바일 적용 */
+/* 사파리만 적용 */
 @supports (background: -webkit-canvas(squares)) {
   .div {
     height: auto;
