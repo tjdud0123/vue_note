@@ -190,3 +190,14 @@ img{
 .wrapper:last-child hr {
   display: none;
 }
+
+/* 가상 선택자로 요소 추가*/
+#like-btn::after {
+      content: "좋아요";
+    }
+}
+@media screen and (max-width: 767px) {
+    #like-btn::after {
+      content: "";
+    }
+}
