@@ -235,3 +235,10 @@ export default
 }  
 </script>
 this.$refs.audio.$el.firstChild;
+
+<!-- 자식 컴포넌트 라이프사이클 훅 사용 -->
+<child-component
+  @hook:created="onChildCreated"
+  @hook:mounted="onChildMounted"
+  @hook:updated="onChildUpdated"
+/>
