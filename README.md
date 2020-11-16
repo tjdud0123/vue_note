@@ -25,6 +25,14 @@ scoped를 쓰게되면 부모 구성 요소의 스타일이 자식 구성 요소
 `>>>`combinator를 사용합니다
 ❗️sass와 같은 css 전처리기 사용시 `>>>`대신 `::v-deep`을 사용해야 합니다.
 
+### 🔶 v-for with v-if
+> Note that it’s not recommended to use v-if and v-for together. Refer to style guide for details.
+v-for과 v-if를 같이 쓰는 것은 권장되지 않는다.
+v-for이 v-if보다 높은 우선순위를 가지고 있기 때문에 사용 용도에 따라 알맞게 사용해야 한다.
+함께 사용할 경우 1번의 로직대로 수행되게 된다.
+1. 특정한 값을 가진 노드만 렌더링 하고 싶을 때 (like filter) -> filter로 대체 가능
+2. 조건에 따라 아예 for문을 돌리고 싶지 않을 때 -> v-if를 상위 요소에 적용
+
 ### 🔶 폼입력 데이터 바인딩
 텍스트 영역의 보간 `(<textarea>{{ text }}</textarea>)`은 작동하지 않습니다. 대신 v-model를 사용하십시오.
 v-model 표현식의 초기 값이 어떤 옵션에도 없으면, <select> 엘리먼트는 “선택없음” 상태로 렌더링됩니다. iOS에서는 이 경우 변경 이벤트가 발생하지 않아 사용자가 첫 번째 항목을 선택할 수 없게됩니다. 사용하지 않는 옵션에 빈 값을 넣는 것이 좋습니다.
