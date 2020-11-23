@@ -33,6 +33,28 @@ v-for이 v-if보다 높은 우선순위를 가지고 있기 때문에 사용 용
 1. 특정한 값을 가진 노드만 렌더링 하고 싶을 때 (like filter) -> filter로 대체 가능
 2. 조건에 따라 아예 for문을 돌리고 싶지 않을 때 -> v-if를 상위 요소에 적용
 
+### 🔶 Vue Fragment
+컴포넌트의 루트 엘레먼트가 필요없을 때 불필요한 div 태그 생성을 막을 수 있다. 
+vue 버전 3부터는 기능을 제공하지만 2에서는 패키지를 다운해 사용할 수 있다.
+[npm 깃헙 링크](https://www.npmjs.com/package/vue-fragments)
+```
+$ yarn add vue-fragment
+```
+
+```html
+<Fragment>
+  <section></sectoion>
+  <div></div>
+</Fragment>
+```
+
+```js
+import { Fragment } from 'vue-fragment'
+  components:{
+    Fragment
+  },
+```
+
 ### 🔶 폼입력 데이터 바인딩
 텍스트 영역의 보간 `(<textarea>{{ text }}</textarea>)`은 작동하지 않습니다. 대신 v-model를 사용하십시오.
 v-model 표현식의 초기 값이 어떤 옵션에도 없으면, <select> 엘리먼트는 “선택없음” 상태로 렌더링됩니다. iOS에서는 이 경우 변경 이벤트가 발생하지 않아 사용자가 첫 번째 항목을 선택할 수 없게됩니다. 사용하지 않는 옵션에 빈 값을 넣는 것이 좋습니다.
