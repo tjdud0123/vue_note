@@ -57,4 +57,10 @@ import { Fragment } from 'vue-fragment'
 
 ### 🔶 폼입력 데이터 바인딩
 텍스트 영역의 보간 `(<textarea>{{ text }}</textarea>)`은 작동하지 않습니다. 대신 v-model를 사용하십시오.
-v-model 표현식의 초기 값이 어떤 옵션에도 없으면, <select> 엘리먼트는 “선택없음” 상태로 렌더링됩니다. iOS에서는 이 경우 변경 이벤트가 발생하지 않아 사용자가 첫 번째 항목을 선택할 수 없게됩니다. 사용하지 않는 옵션에 빈 값을 넣는 것이 좋습니다.
+v-model 표현식의 초기 값이 어떤 옵션에도 없으면, `<select>` 엘리먼트는 “선택없음” 상태로 렌더링됩니다. iOS에서는 이 경우 변경 이벤트가 발생하지 않아 사용자가 첫 번째 항목을 선택할 수 없게됩니다. 사용하지 않는 옵션에 빈 값을 넣는 것이 좋습니다.
+  
+### 🔶 vue - router 새탭에서 창열기
+```js
+let routeData = this.$router.resolve({name: 'routeName', query: {data: "someData"}});
+window.open(routeData.href, '_blank');
+```
