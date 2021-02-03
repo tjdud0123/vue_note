@@ -1,4 +1,4 @@
-# Vue.js_note - vue 관련 메모
+# Vue.js_note - vue 관련 메모 ✍️
 
 ### 🔶 v-if & v-show
 렌더링이 자주일어날 때; CSS 기반 토글만으로 초기 조건에 관계 없이 엘리먼트가 항상 렌더링
