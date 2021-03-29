@@ -4,13 +4,18 @@
          methods: {
             handleResize (event) {
                 console.log(window.innerWidth)
-            }
+            },
+            handleScroll() {
+			console.log('scrolling..........!!!!', window.scrollY);
+		}
         },
         mounted() {
-            window.addEventListener('resize', this.handleResize)
+            window.addEventListener('resize', this.handleResize);
+            window.addEventListener('scroll', this.handleScroll);
         },
         beforeDestroy() {
             window.removeEventListener('resize', this.handleResize)
+            window.removeEventListener('scroll', this.handleScroll);
         }
     }
 </script>
