@@ -23,8 +23,10 @@ export default{
         this.$refs.input.focus()
       }
     },
-    mounted(){
-      this.$refs.child.childFunc();
+    mounted() {
+      if(this.$refs.child.property){ // data 속성 접근 가능
+       this.$refs.child.childFunc(); // function 속성 접근 가능
+      }
     }
 }
 </script>
