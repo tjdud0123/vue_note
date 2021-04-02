@@ -11,7 +11,7 @@ new Vue({
 
 // 뷰파일
 <script>
-import { mapGetters } from 'vuex'; // vuex helper => 접근하기 쉽게 도와줌
+import { mapGetters, mapMutations } from 'vuex'; // vuex helper => 접근하기 쉽게 도와줌
 export default {
     mounted(){
         console.log(this.currentUser)
@@ -21,7 +21,12 @@ export default {
           currentUser: 'auth/user',
           isAuth: 'auth/check',
         }),
-      }
+    },
+    methods: {
+	...mapMutations('loginlModule', {
+		$_showAlert: loginlModuleType.mutations.SET_ALERT_POPUP,
+	}), 
+    }
 }
 </script>
 
