@@ -25,6 +25,15 @@ props: {
       type: Object,
       default: () => {},
     },
+    something: { // 속성이 있는경우 && 타입이 필요한경우
+    	type: Object,
+        default: ()=> {
+        	return{
+            	example: "foo",
+                foo: "example"
+        	}
+        }
+    }
   },
   
   setIdx(){
