@@ -251,3 +251,6 @@ this.$refs.audio.$el.firstChild;
   @hook:mounted="onChildMounted"
   @hook:updated="onChildUpdated"
 />
+
+<!--404 에러 등 이미지 불러오기 실패시 default 처리 -->
+<img :src="defaultImg" alt="" @error="defaultImg">
