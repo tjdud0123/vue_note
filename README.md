@@ -64,3 +64,8 @@ v-model 표현식의 초기 값이 어떤 옵션에도 없으면, `<select>` 엘
 let routeData = this.$router.resolve({name: 'routeName', query: {data: "someData"}});
 window.open(routeData.href, '_blank');
 ```
+
+### 🔶 img 404 이미지등 불러오는 에러났을때 default 처리 - onError property 사용
+```js
+<img :src="defaultImg" alt="" @error="defaultImg">
+```
