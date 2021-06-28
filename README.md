@@ -69,3 +69,15 @@ window.open(routeData.href, '_blank');
 ```js
 <img :src="defaultImg" alt="" @error="defaultImg">
 ```
+
+### 🔶 돔 렌더링 후 실행
+```js
+methods: {
+    async doSomething() {
+        await this.$nextTick();
+        // UI 완료 후 실행될 함수 ...
+    }
+}
+```
+
+[참고](https://doozi316.github.io/vuejs/2020/08/10/Vue4/)
