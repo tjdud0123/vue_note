@@ -72,7 +72,7 @@ data: {
   {{ index }}. {{ key }}: {{ value }}
 </div>
 
-<div>
+<div> // n은 0부터가 아니라 1부터임
   <span v-for="n in 10">{{ n }} </span>
 </div>
 
