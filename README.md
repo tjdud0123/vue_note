@@ -70,14 +70,9 @@ window.open(routeData.href, '_blank');
 <img :src="defaultImg" alt="" @error="defaultImg">
 ```
 
+### 🔶 created / computed 접근가능
+created훅에서는 data를 반응형으로 추적할 수 있게 되며 computed, methods, watch 등이 활성화되어 접근이 가능
+
 ### 🔶 돔 렌더링 후 실행
-```js
-methods: {
-    async doSomething() {
-        await this.$nextTick();
-        // UI 완료 후 실행될 함수 ...
-    }
-}
-```
 
 [참고](https://doozi316.github.io/vuejs/2020/08/10/Vue4/)
